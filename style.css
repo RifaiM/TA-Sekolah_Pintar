@@ -8,12 +8,29 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p,
+li,
+span {
+    font-size: 16px;
+}
+
 /* Header */
 
 .container .top {
     margin: 20px 80px;
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
     gap: 50px;
     align-items: center;
 }
@@ -62,9 +79,8 @@ input[type=text]{
 
 .navbar {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 1.5rem;
+    justify-content: space-evenly;
+    padding: 16px 24px;
 }
 
 .hamburger {
@@ -87,17 +103,17 @@ input[type=text]{
 }
 
 .nav-item {
-    margin-left: 5rem;
+    margin-left: 32px;
 }
 
 .nav-link{
-    font-size: 1.6rem;
-    font-weight: 400;
-    color: #475569;
+    font-size: 16px;
+    color: #000;
+    font-weight: 800;
 }
 
 .nav-link:hover{
-    color: #482ff7;
+    color: #1bb2f3;
 }
 
 /* Banner */
@@ -126,20 +142,14 @@ input[type=text]{
 }
 
 .highlight-1 .item-2 { 
-    color: lightblue;
-    font-size: 35px;
+    color: #179fe9;
     display: flex;
     align-items: center;
-    width: 90%;
 }
 
 .highlight-1 .item-2 p {
     margin: 0;
     text-align: center;
-}
-
-.highlight-1 .item-3 { 
-    font-size: 20px;
 }
 
 .highlight-1 .item-3 p {
@@ -156,17 +166,18 @@ input[type=text]{
 }
 
 .highlight-2 {
-    margin-top: 50px;
+    margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 30px;
+    grid-column-gap: 10px;
 }
 
 .highlight-2 .item-1,
 .highlight-5 .item-1 {
     display: flex;
-    align-items: center;
-    text-align: justify;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
 }
 
 .highlight-2 .item-2 img,
@@ -179,7 +190,7 @@ input[type=text]{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 50px;
+    margin-top: 60px;
     padding: 0 200px;
 }
 
@@ -191,12 +202,14 @@ input[type=text]{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 60px 0;
 }
 
 .highlight-3 .item-3 button {
-    background-color: #4CAF50; /* Green */
+    background-color: #5bc0de;
     border: none;
-    color: white;
+    border-radius: 5px;
+    color: #fff;
     padding: 15px 32px;
     text-decoration: none;
     font-size: 16px;
@@ -211,28 +224,23 @@ input[type=text]{
 }
 
 .highlight-5 {
-    margin-top: 50px;
+    margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 30px;
+    grid-column-gap: 10px;
 }
 
 .highlight-6 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 0px;
+    grid-column-gap: 10px;
 }
 
 .highlight-6 .item-2 { 
-    font-size: 35px;
     display: flex;
-    align-items: center;
-    justify-content: left;
-}
-
-.highlight-6 .item-2 span {
-    font-size: 20px;
-    color: #55595c;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
 }
 
 
@@ -242,9 +250,19 @@ input[type=text]{
     margin: 50px 80px 0px 80px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    column-gap: 30px;
+    row-gap: 50px;
+}
+
+.class-1,
+.class-2,
+.class-3,
+.class-4,
+.class-5,
+.class-6 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
 }
 
 .class-1 img,
@@ -253,21 +271,21 @@ input[type=text]{
 .class-4 img,
 .class-5 img,
 .class-6 img {
-    width: 200px;
-    float: left;
+    width: 100%;
 }
 
 .courses-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin: 60px 0;
 }
 
 .courses-button button {
-    background-color: #4CAF50; /* Green */
+    background-color: #5bc0de;
     border: none;
-    color: white;
+    border-radius: 5px;
+    color: #fff;
     padding: 15px 32px;
     text-decoration: none;
     font-size: 16px;
@@ -348,11 +366,10 @@ and (max-device-width : 480px) {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 210px;
+        top: 220px;
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
-        border-radius: 10px;
         transition: 0.3s;
         display: unset;
     }
@@ -360,6 +377,7 @@ and (max-device-width : 480px) {
     .nav-menu.active {
         left: 0;
         background-color: #fff;
+        position: absolute;
     }
 
     .nav-item {
@@ -369,6 +387,9 @@ and (max-device-width : 480px) {
     .hamburger {
         display: block;
         cursor: pointer;
+        background-color: #e8e8e8;
+        padding: 5px 8px;
+        border-radius: 2px;
     }
 
     .hamburger.active .bar:nth-child(2) {
@@ -432,7 +453,6 @@ and (max-device-width : 480px) {
     }
 
     .highlight-2 {
-        margin-top: 20px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 30px;
@@ -450,7 +470,6 @@ and (max-device-width : 480px) {
 
     .highlight-3 {
         display: flex;
-        margin-top: 20px;
         padding: 0;
     }
 
@@ -461,12 +480,10 @@ and (max-device-width : 480px) {
     .highlight-4 .item-1 {
         text-align: left;
         gap: 20px;
-        margin-top: 20px;
         padding: 0;
     }
 
     .highlight-5 {
-        margin-top: 20px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
@@ -476,7 +493,6 @@ and (max-device-width : 480px) {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
-        margin-top: 20px;
     }
 
     .highlight-6 .item-1 img {
@@ -499,17 +515,28 @@ and (max-device-width : 480px) {
         padding: 20px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+
+    .class-1,
+    .class-2,
+    .class-3,
+    .class-4,
+    .class-5,
+    .class-6 {
+        grid-template-columns: repeat(1, 1fr);
         gap: 20px;
     }
 
-    .class-1 img,
-    .class-2 img,
-    .class-3 img,
-    .class-4 img,
-    .class-5 img,
-    .class-6 img {
-        width: 100%;
-        padding: 10px;
+    .class-txt {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .class-span {
+        display: flex;
+        justify-content: space-between;
     }
 
     .courses-button {
