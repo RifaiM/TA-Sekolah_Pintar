@@ -215,6 +215,12 @@ input[type=text]{
     color: #2ccbf2;
 }
 
+.highlight-3 .item-3 i,
+.courses-button i,
+.class-span i {
+    padding-right: 5px;
+}
+
 .highlight-3 .item-3 a {
     display: block;
     margin: 60px 0;
@@ -321,11 +327,15 @@ input[type=text]{
     margin-right: auto;
 }
 
+.class-span i {
+    color: #dc3545;
+}
+
 /* Footer */
 
 .container-footer {
     background-color: #55595c;
-    height: 300px;
+    height: 85vh;
 }
 
 .container-footer div p {
@@ -336,13 +346,14 @@ input[type=text]{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 30px;
-    padding: 20px 50px 20px 50px;
+    padding: 50px 50px 20px 50px;
 }
 
 .top-footer .left-text {
     display: flex;
-    text-align: justify;
-    align-items: flex-start;
+    text-align: left;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .top-footer .center-text {
@@ -363,8 +374,11 @@ input[type=text]{
 
 .bottom-footer {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction:column; 
+}
+
+.bottom-footer p {
+    margin: 0 auto;
 }
 
 
@@ -512,7 +526,8 @@ and (max-device-width : 480px) {
 
     .highlight-3 .item-3 a {
         width: 100%;
-        padding: 15px 0;
+        text-align: center;
+        padding: 10px 0;
     }
 
     .highlight-4 .item-1 {
@@ -582,7 +597,7 @@ and (max-device-width : 480px) {
     .container-footer {
         background-color: #55595c;
         color: #E8E8E8;
-        height: 800px;
+        height: 240vh;
     }
 
     .container-footer .top-footer {
@@ -612,7 +627,11 @@ and (max-device-width : 480px) {
     }
 
     .bottom-footer {
-        padding: 20px;
+        padding: 10px 0;
         text-align: center;
+    }
+
+    .bottom-footer {
+        border-top: #fff 1px solid;
     }
 }
