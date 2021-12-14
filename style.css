@@ -293,24 +293,48 @@ input[type=text]{
 .class-6 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 10px;
+    grid-column-gap: 20px;
     align-items: center;
 }
 
-.class-1 img,
-.class-2 img,
-.class-3 img,
-.class-4 img,
-.class-5 img,
-.class-6 img {
+.class-img {
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.class-img img,
+.class-img img,
+.class-img img,
+.class-img img,
+.class-img img,
+.class-img img {
     width: 100%;
     border-radius: 5px;
+    transition:all 0.5s ease;
+}
+
+.class-1:hover img,
+.class-2:hover img,
+.class-3:hover img,
+.class-4:hover img,
+.class-5:hover img,
+.class-6:hover img {
+    transform: scale(1.1);
 }
 
 .class-txt {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.class-txt a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.class-txt a:hover {
+    color: #dc3545;
 }
 
 .class-txt p {
@@ -336,6 +360,7 @@ input[type=text]{
 
 .courses-button a:hover {
     transform: scale(1.1);
+    transition: all 0.5s ease;
     background-color: #007bff;
 }
 
