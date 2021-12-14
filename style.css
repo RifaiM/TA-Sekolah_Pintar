@@ -347,7 +347,7 @@ input[type=text]{
 
 .container-footer {
     background-color: #55595c;
-    height: 85vh;
+    height: fit-content;
 }
 
 .container-footer div p {
@@ -386,7 +386,8 @@ input[type=text]{
 
 .bottom-footer {
     display: flex;
-    flex-direction:column; 
+    flex-direction:column;
+    padding: 20px 0; 
 }
 
 .bottom-footer p {
@@ -628,7 +629,7 @@ and (max-device-width : 480px) {
     .container-footer {
         background-color: #55595c;
         color: #E8E8E8;
-        height: 140vh;
+        height: fit-content;
     }
 
     .container-footer .top-footer {
@@ -644,8 +645,9 @@ and (max-device-width : 480px) {
     }
 
     .top-footer .center-text {
-        text-align: left;
+        text-align: center;
         gap: 20px;
+        padding: 30px 0;
     }
 
     .top-footer .center-text img {
