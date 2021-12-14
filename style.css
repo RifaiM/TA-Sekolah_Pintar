@@ -597,7 +597,7 @@ and (max-device-width : 480px) {
     .container-footer {
         background-color: #55595c;
         color: #E8E8E8;
-        height: 100vh;
+        height: 150vh;
     }
 
     .container-footer .top-footer {
