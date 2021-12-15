@@ -776,20 +776,11 @@ and (min-width : 321px) {
 
     /* Banner */
     .container .banner {
-        background-image: url(./img/screencapture-kelas-sekolahpintar-2021-12-06-00_35_44.png);
-        min-height: 500px;
-
-        /* Set background image to fixed (don't scroll along with the page) */
-        background-attachment: fixed;
-
-        /* Center the background image */
-        background-position: center;
-
-        /* Set the background image to no repeat */
-        background-repeat: no-repeat;
-
-        /* Scale the background image to be as large as possible */
-        background-size: cover;
+        background: url(./img/screencapture-kelas-sekolahpintar-2021-12-06-00_35_44.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     }
 
     /* Highlight */
