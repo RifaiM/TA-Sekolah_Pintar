@@ -424,8 +424,7 @@ input[type=text]{
 /* MEDIA QUERIES */
 
 @media only screen
-and (min-device-width : 320px)
-and (max-device-width : 480px) {
+and (max-width : 320px) {
     /* Header */
 
     .container .top {
@@ -515,6 +514,282 @@ and (max-device-width : 480px) {
         background-position: center;
         background-repeat: no-repeat;
         height: 600px;
+    }
+
+    /* Highlight */
+
+    .highlight-wrapper {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .highlight-1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .highlight-1 .item-1 { 
+        grid-area: 2 / 1 / 3;
+    }
+
+    .highlight-1 .item-1 img {
+        width: 100%;
+    }
+
+    .highlight-1 .item-2 { 
+        display: flex;
+    }
+
+    .highlight-1 .item-2 p {
+        text-align: left;
+        font-size: 24px;
+    }
+
+    .highlight-1 .item-3 { 
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .highlight-1 .item-3 ul {
+        padding-left: 30px;
+    }
+
+    .highlight-2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .highlight-2 .item-1,
+    .highlight-5 .item-1 {
+        text-align: left;
+    }
+
+    .highlight-2 .item-1 .text h1,
+    .highlight-5 .item-1 .text h1 {
+        padding: 10px 0;
+    }
+
+    .highlight-3 {
+        display: flex;
+        padding: 0;
+    }
+
+    .highlight-3 .item-1 {
+        text-align: left;
+    }
+
+    .highlight-3 .item-3 a {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .highlight-4 .item-1 {
+        text-align: left;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .highlight-5 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        margin-top: 0;
+    }
+
+    .highlight-6 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .highlight-6 .item-1 img {
+        width: 100%;
+    }
+
+    .highlight-6 .item-2 { 
+        font-size: 28px;
+        display: flex;
+    }
+
+    .highlight-6 .item-2 span {
+        font-size: 16px;
+    }
+
+    /* Course */
+
+    .courses-wrapper {
+        margin: 0 auto;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+
+    .class-1,
+    .class-2,
+    .class-3,
+    .class-4,
+    .class-5,
+    .class-6 {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .class-span {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .courses-button a {
+        width: 200px;
+        padding: 15px 0;
+    }
+
+    /* Footer */
+
+    .container-footer {
+        background-color: #55595c;
+        color: #E8E8E8;
+        height: fit-content;
+    }
+
+    .container-footer .top-footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .top-footer .left-text {
+        display: flex;
+        text-align: left;
+    }
+
+    .top-footer .center-text {
+        text-align: center;
+        gap: 20px;
+        padding: 30px 0;
+    }
+
+    .top-footer .center-text img {
+        width: 100%;
+    }
+    
+    .top-footer .right-text {
+        text-align: left;
+        gap: 20px;
+    }
+
+    .bottom-footer {
+        text-align: center;
+    }
+
+    .bottom-footer {
+        border-top: #fff 1px solid;
+    }
+}
+
+@media only screen
+and (min-width : 321px) {
+    .container .top {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .container .top img {
+        width: 200px;
+    }
+
+    .container .top input {
+        width: 300px;
+        height: 50px;
+    }
+        
+    .search i{
+        top: 25px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 240px;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        transition: 0.3s;
+        display: unset;
+    }
+
+    .nav-menu.active {
+        left: 0;
+        background-color: #fff;
+        position: absolute;
+    }
+
+    .nav-item {
+        margin: 10px 20px;
+    }
+
+    .nav-item > .active {
+        background-color: #55595c;
+        color: #fff;
+        display: block;
+        padding: 10px 15px;
+        width: auto;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 10px 15px;
+        width: auto;
+    }
+
+    .nav-link:hover {
+        background-color: #55595c;
+        color: #fff;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        background-color: #e8e8e8;
+        padding: 5px 8px;
+        border-radius: 2px;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Banner */
+    .container .banner {
+        background-image: url(./img/screencapture-kelas-sekolahpintar-2021-12-06-00_35_44.png);
+        min-height: 500px;
+
+        /* Set background image to fixed (don't scroll along with the page) */
+        background-attachment: fixed;
+
+        /* Center the background image */
+        background-position: center;
+
+        /* Set the background image to no repeat */
+        background-repeat: no-repeat;
+
+        /* Scale the background image to be as large as possible */
+        background-size: cover;
     }
 
     /* Highlight */
