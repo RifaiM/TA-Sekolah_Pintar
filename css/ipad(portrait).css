@@ -34,7 +34,7 @@
 
     .nav-menu.active {
         left: 0;
-        background-color: #fff;
+        background-color: var(--white2);
         position: absolute;
     }
 
@@ -43,8 +43,8 @@
     }
 
     .nav-item > .active {
-        background-color: #55595c;
-        color: #fff;
+        background-color: var(--grey1);
+        color: var(--white2);
         display: block;
         padding: 10px 15px;
         width: auto;
@@ -57,14 +57,14 @@
     }
 
     .nav-link:hover {
-        background-color: #55595c;
-        color: #fff;
+        background-color: var(--grey1);
+        color: var(--white2);
     }
 
     .hamburger {
         display: block;
         cursor: pointer;
-        background-color: #e8e8e8;
+        background-color: var(--white1);
         padding: 5px 8px;
         border-radius: 2px;
     }
@@ -84,11 +84,10 @@
     /* Banner */
     
     .container .banner {
-        background-image:url(../img/screencapture-kelas-sekolahpintar-2021-12-06-00_35_44.webp);
-        background-position: center;
+        background-image:url(../img/screencapture-kelas-sekolahpintar-2021-12-06-00_36_31.webp);
         background-repeat: no-repeat;
-        background-size: cover;
-        height: 300px;
+        background-size: 100% 100%; 
+        height: 100vh;
     }
 
     /* Highlight */
@@ -226,8 +225,8 @@
     /* Footer */
 
     .container-footer {
-        background-color: #55595c;
-        color: #E8E8E8;
+        background-color: var(--grey1);
+        color: var(--white1);
         height: fit-content;
     }
 
@@ -264,5 +263,5 @@
     }
 
     .bottom-footer {
-        border-top: #fff 1px solid;
+        border-top: var(--white2) 1px solid;
     }
