@@ -87,7 +87,8 @@
         background-image:url(../img/screencapture-kelas-sekolahpintar-2021-12-06-00_35_44.png);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
+        background-attachment: fixed;
         height: 300px;
     }
 
