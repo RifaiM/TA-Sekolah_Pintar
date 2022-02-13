@@ -1,0 +1,33 @@
+// button classes
+
+@use './config';
+
+%btn {
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 32px;
+    justify-content: center;
+    margin: 60px auto;
+}
+
+.btn-primary {
+    a {
+        @extend %btn;
+        background-color: map-get(config.$base-color, "blue5");
+        color: map-get(config.$base-color, "white2");
+
+        &:hover {
+            transform: scale(1.1);
+            transition: all 0.5s ease;
+            background-color: map-get(config.$base-color, "blue3");
+        }
+    }
+}
+.btn-secondary {
+    a {
+        @extend %btn;
+        background-color: map-get(config.$base-color, "blue5");
+        color: map-get(config.$base-color, "white2");
+    }
+}

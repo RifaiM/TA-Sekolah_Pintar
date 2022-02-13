@@ -1,0 +1,406 @@
+@use './config';
+@use './utilities';
+@use './button';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: map-get(config.$spacing, "small");
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: config.$font-stack;
+    min-height: 100%;
+
+    h1 {
+        font-size: config.$h1;
+    }
+    h2 {
+        font-size: config.$h2;
+        font-weight: map-get(config.$font-weight, "semi-bold");
+    }
+    h3 {
+        font-size: config.$h3;
+    }
+    a {
+        text-decoration: none;
+    }
+    li {
+        list-style: none;
+    }
+    p, li, span, a {
+        font-size: config.$small;
+    }
+    p, li {
+        color: map-get(config.$base-color, "grey2");
+    }
+    span {
+        color: map-get(config.$base-color, "grey1");
+    }
+}
+
+/* HEADER */
+
+header {
+    .container {
+        & .top {
+            margin: 20px 80px;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+
+            & img {
+                width: 250px;
+            }
+
+            & input {
+                width: 500px;
+                height: 50px;
+                border: none;
+                border-radius: 50px;
+                background-color: map-get(config.$base-color, "white1");
+
+                &[type=text] {
+                    padding: 12px 40px; 
+                    margin: 8px 0; 
+                    display: inline-block;
+                    border: 1px solid map-get(config.$base-color, "grey3");
+                }
+            }
+
+            & .search {
+                position: relative;
+
+                & i {
+                    position: absolute;
+                    left: 15px;
+                    top: 23px;
+                    color: map-get(config.$base-color, "grey1");
+                }
+            }
+        }
+    }
+
+    /* Navbar */
+
+    .navbar {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 16px 24px;
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .nav-item {
+                margin-left: 32px;
+
+                & > .active {
+                    border-bottom: 2px solid map-get(config.$base-color, "grey1");
+                }
+
+                .nav-link {
+                    color: map-get(config.$base-color, "black2");
+                    font-weight: map-get(config.$font-weight, "bold");
+                    padding: 5px 0;
+
+                    &:hover {
+                        color: map-get(config.$base-color, "blue1");
+                        border-bottom: 2px solid map-get(config.$base-color, "grey1");
+                    }
+                }
+            }
+        }
+
+        /* hamburger small screen */
+
+        .hamburger {
+            display: none;
+
+            .bar {
+                display: block;
+                width: 25px;
+                height: 3px;
+                margin: 5px auto;
+                transition: all 0.3s ease-in-out;
+                background-color: map-get(config.$base-color, "black1");
+            }
+        }
+    }
+}
+
+/* MAIN */
+
+main {
+    .container {
+        .banner {
+            background-image: url(../img/screencapture-kelas-sekolahpintar-2021-12-06-00_35_44.webp);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 100vh;
+        }
+
+        /* Highlight */
+
+        .highlight-wrapper {
+            margin: 20px 80px;
+
+            .highlight-1 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column: 10px;
+
+                .item-1 {
+                    grid-area: 1 / 1 / 3 / 2;
+                }
+                .item-2 {
+                    color: map-get(config.$base-color, "blue2");
+                    display: flex;
+                    align-items: center;
+
+                    p {
+                        margin: 0;
+                        text-align: center;
+                    }
+                }
+                .item-3 {
+                    font-weight: map-get(config.$font-weight, "semi-bold");
+
+                    p {
+                        margin: 0;
+                    }
+                    ul {
+                        padding-left: 50px;
+
+                        li {
+                            list-style: unset;
+
+                            a {
+                                color: map-get(config.$base-color, "grey2");
+    
+                                &:hover {
+                                    color: map-get(config.$base-color, "red");
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .highlight-2 {
+                margin-top: 60px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 10px;
+
+                .item-1 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 20px;
+                }
+                .item-2 {
+                    
+                    img {
+                        width: 100%;
+                        border-radius: 20px;
+                    }
+                }
+            }
+
+            .highlight-3 {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 60px;
+                padding: 0 200px;
+
+                .item-1 {
+                    text-align: center;
+                    color: map-get(config.$base-color, "blue4");
+                }
+                .item-3 {
+                    text-align: center;
+                    i {
+                        padding-right: 5px;
+                    }
+                }
+            }
+
+            .highlight-4 {
+                
+                .item-1 {
+                    text-align: center;
+                    padding: 50px 200px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+            }
+
+            .highlight-5 {
+
+                margin-top: 60px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 10px;
+
+                .item-1 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 20px;
+                }
+                .item-2 {
+                    
+                    img {
+                        width: 100%;
+                        border-radius: 20px;
+                    }
+                }
+            }
+
+            .highlight-6 {
+
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 10px;
+
+                .item-2 {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    justify-content: center;
+                }
+            }
+        }
+
+        /* courses */
+
+        .courses-wrapper {
+            margin: 50px 80px 0px 80px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 30px;
+            row-gap: 50px;
+
+            .class-1,
+            .class-2,
+            .class-3,
+            .class-4,
+            .class-5,
+            .class-6 {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 20px;
+                align-items: center;
+
+                &:hover img {
+                    transform: scale(1.1);
+                }
+                .class-img {
+                    overflow: hidden;
+                    border-radius: 5px;
+
+                    img {
+                        width: 100%;
+                        border-radius: 5px;
+                        transition:all 0.5s ease;
+                    }
+                }
+                .class-txt {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    a {
+                        color: inherit;
+
+                        &:hover {
+                            color: map-get(config.$base-color, "red");
+                        }
+                    }
+                    p {
+                        font-weight: map-get(config.$base-color, "bold");
+                    }
+                }
+                .class-span {
+
+                    i {
+                        color: map-get(config.$base-color, "red");
+                        padding-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .courses-button {
+            margin: 60px 0;
+            text-align: center;
+
+            i {
+                padding-right: 5px;
+            }
+        }
+    }
+}
+
+/* FOOTER */
+
+footer {
+
+    .container-footer {
+        background-color: map-get(config.$base-color, "grey1");
+        height: fit-content;
+        color: map-get(config.$base-color, white1);
+
+        div p {
+            color: map-get(config.$base-color, white2);
+        }
+
+        .top-footer {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 30px;
+            padding: 50px 50px 20px 50px;
+
+            .left-text {
+                display: flex;
+                text-align: left;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .center-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                text-align: center;
+                gap: 20px;
+            }
+            .right-text {
+                text-align: justify;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 20px;
+            }
+        }
+        .bottom-footer {
+            display: flex;
+            flex-direction:column;
+            padding: 20px 0;
+
+            p {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@import './mobile';

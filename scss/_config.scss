@@ -1,0 +1,54 @@
+// Font family
+
+$font-stack: 'Nunito Sans', sans-serif;
+
+
+// Font sizing
+
+$h1: 28px;
+$h2: 24px;
+$h3: 20px;
+$small: 16px;
+
+// Font weights
+
+// use map-get css
+// example : font-weight: map-get(config.$font-weight, "regular");
+
+$font-weight: (
+    "extra-light": 200,
+    "light": 300,
+    "regular": 400,
+    "semi-bold": 600,
+    "bold": 700,
+    "extra-bold": 800,
+    "black": 900
+);
+
+// Letter spacing
+
+$spacing: (
+    "normal": 1px,
+    "small": 0.5px
+);
+
+// Base color
+
+// same with font-weight ..use map-get
+
+$base-color: (
+    "grey1": #55595c,
+    "grey2": #606060,
+    "grey3": #ccc,
+    "white1": #e8e8e8,
+    "white2": #fff,
+    "blue1": #1bb2f3,
+    "blue2": #179fe9,
+    "blue3": #007bff,
+    "blue4": #2ccbf2,
+    "blue5": #5bc0de,
+    "black1": #101010,
+    "black2": #000,
+    "red": #dc3545
+);
+
